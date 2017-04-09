@@ -1,0 +1,21 @@
+<h1>ポエム</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>題名</th>
+      <th>内容</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poems.each do |poem| %>
+      <tr>
+        <td><%= poem.title %></td>
+        <td><%= poem.content %></td>
+        <td><%= link_to '詳細', poem %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -8,12 +8,13 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :contacts, only: [:new, :create]do
     collection do
       post :confirm
     end
   end
+
+  resources :poems,only:[:index, :show]
 
   root 'top#index'
 

@@ -4,9 +4,8 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-  
-  get 'relationships/create'
 
+  get 'relationships/create'
   get 'relationships/destroy'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -25,7 +24,9 @@ Rails.application.routes.draw do
   resources :relationships,only:[:create, :destroy]
   resources :poems,only:[:index, :show]
   resources :users,only:[:index, :show]
-
+  resources :conversations do
+    resources :messages
+  end
   root 'top#index'
 
   if Rails.env.development?

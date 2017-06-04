@@ -45,7 +45,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano3-unicorn'  
+  gem 'capistrano3-unicorn'
 end
 
 gem 'twitter-bootstrap-rails'
@@ -62,7 +62,6 @@ group :development do
   gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'better_errors'
-  gem 'dotenv-rails'
 end
 
 gem 'rails_admin'
